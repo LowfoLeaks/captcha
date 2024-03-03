@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prestart": "npm install --omit=dev",
-    "prestart:cleanup": "npm prune --production --omit=dev",
-    "start": "npm run prestart:cleanup && node index.js --omit=dev"
+    "prestart": "npm install ",
+    "prestart:cleanup": "npm prune",
+    "start": "npm run prestart:cleanup && node index.js "
   },
   "keywords": [],
   "author": "",
