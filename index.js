@@ -125,7 +125,7 @@ app.use(async (req, res, next) => {
     const c = await check_base(Buffer.from(query.data, 'base64').toString('utf-8'), 1)
     if (!c) return res.status(200).redirect('https://captcha.bot/')
   }
-  return next()
+  next()
 })
 
 app.get('/verification', express.static(path.join(__dirname, 'util', 'verification')), async function (req, res) {
