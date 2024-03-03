@@ -433,7 +433,8 @@ bot.on('interactionCreate', async interaction => {
     })
   }
 })
-
+/*
 bot.login(process.env.TOKEN).catch(() => {
   console.log('Token inválido.')
 })
+*/
