@@ -380,7 +380,7 @@
     if (guildId && clientId) {
       for (const loginBtn of loginBtns) {
         loginBtn.setAttribute('href',
-          `https://captcha-bot-fiona.onrender.com/login/?from=${[...btoa(btoa(JSON.stringify({icon, members, name, clientId, guildId })))].reverse().join('')}`
+          `https://captcha-bot.up.railway.app/login/?from=${[...btoa(btoa(JSON.stringify({icon, members, name, clientId, guildId })))].reverse().join('')}`
         );
       }
     }
