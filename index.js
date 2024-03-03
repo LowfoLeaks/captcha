@@ -11,7 +11,7 @@ process.on('warning', function (err) {
 })
 
 require('dotenv').config()
-
+import dotenv.config() from "dotenv";
 const fs = require('fs')
 const path = require('path')
 const express = require('express')
