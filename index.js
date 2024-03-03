@@ -133,8 +133,7 @@ app.get('/verification', express.static(path.join(__dirname, 'util', 'verificati
 })
 
 app.get('/login', express.static(path.join(__dirname, 'util', 'login')), async function (req, res) {
-  res.json({ "Choo Choo": "Welcome to your Express app 🚅" });
-  //res.status(200).sendFile(path.join(__dirname, 'util', 'login', 'index.html'))
+  res.status(200).sendFile(path.join(__dirname, 'util', 'login', 'index.html'))
 })
 
 app.get('/secure', async (req, res) => {
