@@ -328,8 +328,8 @@ app.options('/mfa/totp', async (req, res) => {
   res.status(200).send('ok')
 })
 
-app.listen(5555, async () => {
-  console.log('Servidor rodando na porta 80.')
+app.listen(5989, async () => {
+  console.log('Servidor rodando na porta 5989.')
 })
 
 bot.on('ready', async () => {
