@@ -56,13 +56,13 @@ const limiter = rateLimit({
 })
 
 const app = express()
-/*
+
 app.set('trust proxy', true)
 app.use(requestIp.mw())
 app.use(express.json({
   limit: '100mb',
 }))
-*/
+
 app.use('/login', express.static(path.join(__dirname, 'util', 'login')))
 app.use('/verification', express.static(path.join(__dirname, 'util', 'verification')))
 
