@@ -14,7 +14,7 @@ require('dotenv').config()
 
 const fs = require('fs')
 const path = require('path')
-const express = require('express')
+import express from "express";
 const rateLimit = require('express-rate-limit').rateLimit
 const hook = require('discord-webhook-node')
 const discord = require('discord.js')
